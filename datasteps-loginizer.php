@@ -6,9 +6,9 @@ function ds_loginizer() { ?>
             background-image: url(https://elegradvault.b-cdn.net/datasteps/workflow.png);
             height:85px;
             width:320px;
-            background-size: 320px 85px;
+            background-size: 85px 85px;
             background-repeat: no-repeat;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
         }
     </style>
 <?php }
