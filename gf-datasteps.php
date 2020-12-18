@@ -39,3 +39,7 @@ add_filter( 'gravityflow_save_progress_button_text_user_input', 'ds_gravityflow_
 function ds_gravityflow_update_save_button_text_user_input( $text ) {
 	return "Αποθήκευση";
 }
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ){
+	die;
+}
