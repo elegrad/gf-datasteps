@@ -1,20 +1,23 @@
 <?php
 
-function ds_loginizer() if ( has_custom_logo() ) :
+function ds_loginizer() {
  
-    $image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
-    ?>
-    <style type="text/css">
-        .login h1 a {
-            background-image: url(<?php echo esc_url( $image[0] ); ?>);
-            -webkit-background-size: <?php echo absint( $image[1] )?>px;
-            background-size: <?php echo absint( $image[1] ) ?>px;
-            height: <?php echo absint( $image[2] ) ?>px;
-            width: <?php echo absint( $image[1] ) ?>px;
-        }
-    </style>
-    <?php
-endif;
+    if ( has_custom_logo() ) :
+ 
+        $image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+        ?>
+        <style type="text/css">
+            .login h1 a {
+                background-image: url(<?php echo esc_url( $image[0] ); ?>);
+                -webkit-background-size: <?php echo absint( $image[1] )?>px;
+                background-size: <?php echo absint( $image[1] ) ?>px;
+                height: <?php echo absint( $image[2] ) ?>px;
+                width: <?php echo absint( $image[1] ) ?>px;
+            }
+        </style>
+        <?php
+    endif;
+}
 add_action( 'login_enqueue_scripts', 'ds_loginizer' );
 
 // changing the logo link from wordpress.org to your site
