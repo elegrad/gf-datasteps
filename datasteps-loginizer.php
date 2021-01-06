@@ -35,6 +35,10 @@ function ds_loginizer() { ?>
 		div.nsl-container .nsl-button-default div.nsl-button-label-container {
 			font-size:12px !important;
 		}
+		.nsl-container.nsl-container-block.nsl-container-login-layout-below {
+			border-top: 2px solid #a7a7a7;
+			margin-top: 65px;
+		}
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'ds_loginizer' );
