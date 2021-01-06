@@ -2,14 +2,34 @@
 
 function ds_loginizer() { ?>
     <style type="text/css">
+		#login {
+			width:420px !important;
+		}
+		.login h1 {
+			display: none;
+		}
         #login h1 a, .login h1 a {
-            background-image: url(https://elegradvault.b-cdn.net/datasteps/workflow.png);
+            /*background-image: url(https://elegradvault.b-cdn.net/datasteps/workflow.png);*/
             height:85px;
-            width:320px;
+            width:420px;
             background-size: 85px 85px;
             background-repeat: no-repeat;
             padding-bottom: 20px;
         }
+		.login #login_error {
+			border-left-color: #dc3232;
+			border-width: 0 !important;
+			background-color: #dc3232 !important;
+			color: #fff;
+			font-size: 16px;
+			padding: 20px !important;
+		}
+		div.nsl-container-block .nsl-container-buttons a {
+			max-width: 100% !important;
+		}
+		div.nsl-container .nsl-button-default div.nsl-button-label-container {
+			font-size:12px !important;
+		}
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'ds_loginizer' );
