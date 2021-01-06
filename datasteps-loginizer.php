@@ -5,8 +5,13 @@ function ds_loginizer() { ?>
 		#login {
 			width:420px !important;
 		}
-		.login h1 {
+		.login h1,
+		#backtoblog {
 			display: none;
+		}
+		.login #nav {
+			margin: 24px 0 0 0;
+			text-align: center;
 		}
         #login h1 a, .login h1 a {
             /*background-image: url(https://elegradvault.b-cdn.net/datasteps/workflow.png);*/
